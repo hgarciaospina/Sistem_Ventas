@@ -17,12 +17,13 @@ namespace Sistem_Ventas.Models
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage ="<font color='red'>Debe de ingresar un correo electrónico...</ font>")]
+            [EmailAddress(ErrorMessage = "<font color='red'>Debe de ingresar un correo electrónico válido</ font>")]
             public String Email { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "<font color='red'>Debe de ingresar una contraseña...</ font>")]
             [DataType(DataType.Password)]
+            [StringLength(100, ErrorMessage = "<font color='red'>El número de caracteres del {0} debe ser de al menos {2}...</ font>", MinimumLength = 6)]
             public String Password { get; set; }
 
 
