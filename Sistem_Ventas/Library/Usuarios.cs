@@ -28,5 +28,30 @@ namespace Sistem_Ventas.Library
             _usersRole = new UsersRoles();
         }
 
+        internal async Task<List<object[]>> userLogin(string email, string password)
+        {
+            try
+            {
+                var result = await _signInManager.PasswordSignInAsync(email, password, false,
+                    //En false no bloquea la cuenta si no se autentica correctamente
+                    lockoutOnFailure: false);
+                if (result.Succeeded)
+                {
+                    //Buscamos en la BD el usuario logueado y cargamos sus datos en appUser
+                    var appUser = _userManager.Users.Where(u => u.Email.Equals(email)).ToList();
+                }
+                else
+                {
+                    code = "1";
+                    description = "Correo o contraseña inválidos";
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

@@ -11,6 +11,9 @@ namespace Sistem_Ventas.Library
 {
     public class ListObject
     {
+        public String description;
+        public String code;
+            
         public UsersRoles _usersRole;
         public UserData _userData;
         public IdentityError _identityError;
