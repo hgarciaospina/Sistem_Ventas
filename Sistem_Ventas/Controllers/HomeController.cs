@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +22,19 @@ namespace Sistem_Ventas.Controllers
         {
             await CreateRoles(serviceProvider);
             return View();
+        }
+
+        //Envia el objeto model a la vista index con los datos del Login
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Index(LoginViewModels model)
+        {
+            //Valida de que las propiedades de LoginViewModels traigan sus datos correspondientes
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
         }
         public IActionResult About()
         {
