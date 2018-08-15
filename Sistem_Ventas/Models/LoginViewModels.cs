@@ -18,7 +18,7 @@ namespace Sistem_Ventas.Models
         public class InputModel
         {
             [Required(ErrorMessage ="<font color='red'>Debe de ingresar un correo electrónico...</ font>")]
-            [EmailAddress(ErrorMessage = "<font color='red'>Debe de ingresar un correo electrónico válido</ font>")]
+            [RegularExpression(@"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$", ErrorMessage = "<font color='red'>El correo electrónico no es una dirección de correo electrónico válida.</font>")]
             public String Email { get; set; }
 
             [Required(ErrorMessage = "<font color='red'>Debe de ingresar una contraseña...</ font>")]
