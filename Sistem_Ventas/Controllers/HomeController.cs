@@ -7,20 +7,22 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using Sistem_Ventas.Library;
 using Sistem_Ventas.Models;
 
 namespace Sistem_Ventas.Controllers
 {
     public class HomeController : Controller
     {
-        IServiceProvider serviceProvider;
-        public HomeController(IServiceProvider serviceProvider)
+        private Usuarios _usuarios;
+
+        public HomeController(UserManager<IdentityUser> userManager, 
+            SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
-            this.serviceProvider = serviceProvider;
+            _usuarios = new Usuarios(userManager, signInManager, roleManager);
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            await CreateRoles(serviceProvider);
             return View();
         }
 
@@ -32,7 +34,8 @@ namespace Sistem_Ventas.Controllers
             //Valida de que las propiedades de LoginViewModels traigan sus datos correspondientes
             if (ModelState.IsValid)
             {
-
+                List<object[]> listObject = await _usuarios.userLogin(model.Input.Email, 
+                    model.Input.Password);
             }
             return View(model);
         }

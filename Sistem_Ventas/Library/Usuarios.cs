@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Sistem_Ventas.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,15 @@ namespace Sistem_Ventas.Library
                 {
                     //Buscamos en la BD el usuario logueado y cargamos sus datos en appUser
                     var appUser = _userManager.Users.Where(u => u.Email.Equals(email)).ToList();
+                    _userRoles = await _usersRole.getRole(_userManager, _roleManager, appUser[0].Id);
+                    _userData = new UserData
+                    {
+                        Id = appUser[0].Id,
+                        Role = _userRoles[0].Text,
+                        UserName = appUser[0].UserName
+                    };
+                    code = "0";
+                    description = result.Succeeded.ToString();
                 }
                 else
                 {
@@ -46,12 +56,20 @@ namespace Sistem_Ventas.Library
                     description = "Correo o contraseña inválidos";
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                code = "2";
+                description = ex.Message;
             }
+            _identityError = new IdentityError
+            {
+                Code = code,
+                Description = description
+            };
+            object[] data = { _identityError, _userData };
+            dataList.Add(data);
+            return dataList;
         }
-
     }
 }
