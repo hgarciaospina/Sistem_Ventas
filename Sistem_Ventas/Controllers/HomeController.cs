@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using Sistem_Ventas.Areas.Principal.Controllers;
 using Sistem_Ventas.Library;
 using Sistem_Ventas.Models;
 
@@ -34,9 +36,21 @@ namespace Sistem_Ventas.Controllers
             //Valida de que las propiedades de LoginViewModels traigan sus datos correspondientes
             if (ModelState.IsValid)
             {
-                List<object[]> listObject = await _usuarios.userLogin(model.Input.Email, 
+                List<object[]> listObject = await _usuarios.userLogin(model.Input.Email,
                     model.Input.Password);
+                object[] objects = listObject[0];
+                var _identityError = (IdentityError)objects[0];
+                model.ErrorMessage = _identityError.Description;
+
+                //Si los datos de autenticación ingresados son correctos
+                if (model.ErrorMessage.Equals("True"))
+                {
+                    //Se obtiene la información del usuario que ha iniciado sesión
+                    var data = JsonConvert.SerializeObject(objects[1]);
+                    return RedirectToAction(nameof(PrincipalController.Index), "Principal");
+                }
             }
+
             return View(model);
         }
         public IActionResult About()
