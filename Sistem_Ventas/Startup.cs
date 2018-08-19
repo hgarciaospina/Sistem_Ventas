@@ -69,9 +69,21 @@ namespace Sistem_Ventas
 
             app.UseMvc(routes =>
             {
+                //Ruta por defecto de la página que muestra de primero
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+                /*
+                 * routes.MapAreaRoute --> Indica que el controlador se encuentra en un Area
+                 * ("Principal") --> Nombre que tiene la ruta, en este caso se llama Principal
+                 * ("Principal") --> El siguiente parámetro es el nombre del Area, en este caso Principal
+                 * Template de la ruta :  "{controller=Principal}/{action=Index}/{id?}"
+                 * el valor para controller es el nombre del controlador que para este caso es Principal
+                 */
+
+                routes.MapAreaRoute("Principal", "Principal", "{controller=Principal}/{action=Index}/{id?}");
+                
             });
         }
     }

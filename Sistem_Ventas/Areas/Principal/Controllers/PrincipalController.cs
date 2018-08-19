@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Sistem_Ventas.Areas.Principal.Controllers
 {
+    [Area("Principal")]
     public class PrincipalController : Controller
     {
         public IActionResult Index()

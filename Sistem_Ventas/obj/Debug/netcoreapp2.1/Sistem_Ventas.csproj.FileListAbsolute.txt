@@ -37,3 +37,4 @@ D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.dll
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.pdb
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.csproj.CopyComplete
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.csprojAssemblyReference.cache
+D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Principal\Views\Principal\Index.g.cshtml.cs

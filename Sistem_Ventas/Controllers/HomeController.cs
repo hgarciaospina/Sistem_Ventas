@@ -49,6 +49,10 @@ namespace Sistem_Ventas.Controllers
                     var data = JsonConvert.SerializeObject(objects[1]);
                     return RedirectToAction(nameof(PrincipalController.Index), "Principal");
                 }
+                else
+                {
+                    return View(model);
+                }
             }
 
             return View(model);
