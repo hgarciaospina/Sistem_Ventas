@@ -45,6 +45,15 @@ namespace Sistem_Ventas
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.ConfigureApplicationCookie(options => {
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromDays(1);
+                /* Cuando no tiene autorización se direcciona a la acción 
+                   Index del controller Home que corresponde al Login
+                */
+                options.LoginPath = "/Home/Index";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
