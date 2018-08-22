@@ -54,11 +54,17 @@ namespace Sistem_Ventas
                 */
                 options.LoginPath = "/Home/Index";
             });
+
+            services.AddSession(options => {
+                options.Cookie.Name = ".SystemVentas.Session";
+                options.IdleTimeout = TimeSpan.FromHours(12);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseSession();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -69,7 +75,7 @@ namespace Sistem_Ventas
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
+            app.UseStatusCodePagesWithRedirects("/Error");
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
