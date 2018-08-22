@@ -75,7 +75,26 @@ namespace Sistem_Ventas
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-            app.UseStatusCodePagesWithRedirects("/Error");
+
+            /*  Método recomendado para desplegar errores en una página personalizada
+             *  recibe 3 parámetros
+                ("/controlador/accion_controlador", "?statusCode={0}");
+             */
+
+            app.UseStatusCodePagesWithReExecute("/Error/Error", "?statusCode={0}");
+
+            /* Código de error por default si se ingresa una url no válida
+             
+               app.UseStatusCodePages(); 
+            */
+
+            /* Otra forma de ver el Código de error por default si se ingresa una url no válida
+             * despliega el error en la vista personalizada Error.
+             
+               app.UseStatusCodePagesWithRedirects("/Error");
+             */
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
@@ -97,7 +116,7 @@ namespace Sistem_Ventas
                  * el valor para controller es el nombre del controlador que para este caso es Principal
                  */
 
-                routes.MapAreaRoute("Principal", "Principal", "{controller=Principal}/{action=Index}/{id?}");
+            routes.MapAreaRoute("Principal", "Principal", "{controller=Principal}/{action=Index}/{id?}");
                 
             });
         }
