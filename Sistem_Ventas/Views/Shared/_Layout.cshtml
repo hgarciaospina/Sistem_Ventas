@@ -29,13 +29,35 @@
                         <ul class="right hide-on-med-and-down">
                             <a asp-area="Usuarios" asp-controller="Usuarios" asp-action="SessionClose">
                                 Salir
-                             </a>  
+                            </a>
                         </ul>
 
+                        <a href="#" data-target="slide-out" class="btn-floating btn-large waves-effect waves-light cyan darken-2 sidenav-trigger"></a>
                     </div>
                 }
             </div>
         </nav>
+
+        <ul id="slide-out" class="sidenav">
+            <li>
+                <div class="user-view cyan darken-2">
+                    <img id="foto1" class="circle responsive-img valign profile-image"  src="~/images/fotos/default.png" />
+
+                    <p class="white-text" id="name1">@UserManager.GetUserName(User)</p>
+                    <p class="white-text" id="role1"></p>
+                </div>
+            </li>
+            <li>
+                <a asp-area="Principal" asp-controller="Principal" asp-action="Index"
+                   onclick="">Inicio</a><a href="">Inicio</a>
+            </li>
+            <li>
+                <a asp-area="Usuarios" asp-controller="Usuarios" asp-action="SessionClose">
+                    Salir
+                </a>
+            </li>
+        </ul>
+
         <partial name="_CookieConsentPartial" />
 
         <div class="container body-content">
