@@ -17,15 +17,28 @@ namespace Sistem_Ventas.Controllers
     public class HomeController : Controller
     {
         private Usuarios _usuarios;
+        private SignInManager<IdentityUser> _signInManager;
+
 
         public HomeController(UserManager<IdentityUser> userManager, 
             SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
+            _signInManager = signInManager;
             _usuarios = new Usuarios(userManager, signInManager, roleManager);
         }
         public IActionResult Index()
         {
-            return View();
+            //Si se logueo un usuario muestra la vista principal
+            if (_signInManager.IsSignedIn(User))
+            {
+                return RedirectToAction(nameof(PrincipalController.Index),  "Principal");
+            }
+            //Sino se ha logueado o se destruyó la información de un usuario logueado muestra el login
+            else
+            {
+                return View();
+            }
+            
         }
 
         //Envia el objeto model a la vista index con los datos del Login

@@ -117,6 +117,8 @@ namespace Sistem_Ventas
                  */
 
             routes.MapAreaRoute("Principal", "Principal", "{controller=Principal}/{action=Index}/{id?}");
+
+            routes.MapAreaRoute("Usuarios", "Usuarios", "{controller=Usuarios}/{action=Index}/{id?}");
                 
             });
         }
