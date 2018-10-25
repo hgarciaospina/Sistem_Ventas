@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,7 +17,7 @@ namespace Sistem_Ventas.Controllers
 {
     public class HomeController : Controller
     {
-        private Usuarios _usuarios;
+        private LUsuarios _usuarios;
         private SignInManager<IdentityUser> _signInManager;
 
 
@@ -24,7 +25,7 @@ namespace Sistem_Ventas.Controllers
             SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             _signInManager = signInManager;
-            _usuarios = new Usuarios(userManager, signInManager, roleManager);
+            _usuarios = new LUsuarios(userManager, signInManager, roleManager);
         }
         public IActionResult Index()
         {
@@ -60,6 +61,7 @@ namespace Sistem_Ventas.Controllers
                 {
                     //Se obtiene la información del usuario que ha iniciado sesión
                     var data = JsonConvert.SerializeObject(objects[1]);
+                    HttpContext.Session.SetString("User", data);
                     return RedirectToAction(nameof(PrincipalController.Index), "Principal");
                 }
                 else

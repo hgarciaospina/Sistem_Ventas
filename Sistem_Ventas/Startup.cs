@@ -30,7 +30,8 @@ namespace Sistem_Ventas
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                // context => false --> deshabilita el banner y los botones por defecto que muestra al iniciar la aplicación
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 

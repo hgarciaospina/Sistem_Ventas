@@ -24,6 +24,7 @@ namespace Sistem_Ventas.Areas.Usuarios.Controllers
         }
         public async Task<IActionResult> SessionClose()
         {
+            HttpContext.Session.Remove("User");
             await _signInManager.SignOutAsync();
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }

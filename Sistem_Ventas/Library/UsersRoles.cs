@@ -12,7 +12,6 @@ namespace Sistem_Ventas.Library
         public UsersRoles()
         {
             _userRoles = new List<SelectListItem>();
-
         }
 
         public async Task<List<SelectListItem>> getRole(UserManager<IdentityUser> userManager,
