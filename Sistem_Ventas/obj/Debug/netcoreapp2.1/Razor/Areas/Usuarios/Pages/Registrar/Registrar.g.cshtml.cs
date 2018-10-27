@@ -58,7 +58,7 @@ using Sistem_Ventas.Areas.Usuarios;
             WriteLiteral("<div id=\"\" class=\"container2\">\r\n    ");
             EndContext();
             BeginContext(73, 1514, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f1208929ddb942628a721d2a1db0702f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "96ac71f2a0d34f8a8058cc883dcc0cf6", async() => {
                 BeginContext(123, 527, true);
                 WriteLiteral(@"
         <div class=""modal-content"">
@@ -75,7 +75,7 @@ using Sistem_Ventas.Areas.Usuarios;
                                     ");
                 EndContext();
                 BeginContext(650, 39, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3f2d4ff625164637be67e3ea48b7e314", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "03a4b468749c440695325a6098121910", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

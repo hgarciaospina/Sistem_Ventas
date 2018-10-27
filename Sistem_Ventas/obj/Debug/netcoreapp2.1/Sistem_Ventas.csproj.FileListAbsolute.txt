@@ -25,6 +25,7 @@ D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Usuarios\Page
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Usuarios\Pages\_ViewImports.g.cshtml.cs
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Usuarios\Pages\_ViewStart.g.cshtml.cs
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Usuarios\Views\Usuarios\Index.g.cshtml.cs
+D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Usuarios\Views\_ViewImports.g.cshtml.cs
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Views\Error\Error.g.cshtml.cs
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
@@ -43,4 +44,3 @@ D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.Views.pdb
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.dll
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.pdb
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.csproj.CopyComplete
-D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Areas\Usuarios\Views\_ViewImports.g.cshtml.cs
