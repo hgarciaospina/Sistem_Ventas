@@ -45,7 +45,10 @@
                 <img id="foto1" class="circle responsive-img valign profile-image" src="~/images/fotos/default.png" />
 
                 <p class="white-text" id="name1">@UserManager.GetUserName(User)</p>
-                <p class="white-text" id="role1">@ViewData["Roles"]</p>
+                <p class="white-text" id="role1">
+                   @User.Claims.FirstOrDefault(u => u.Type.Equals(
+                    "http://schemas.microsoft.com/ws/2008/06/identity/claims/role")).Value
+                </p>
             </div>
         </li>
         <li>
@@ -76,7 +79,10 @@
                                     </div>
                                     <div class="col col s8 m8 l8">
                                         <p class="white-text" id="name2">@UserManager.GetUserName(User)</p>
-                                        <p class="white-text" id="role2">@ViewData["Roles"]</p>
+                                        <p class="white-text" id="role2">
+                                          @User.Claims.FirstOrDefault(u => u.Type.Equals(
+                                            "http://schemas.microsoft.com/ws/2008/06/identity/claims/role")).Value
+                                        </p>
                                     </div>
                                 </div>
                             </li>

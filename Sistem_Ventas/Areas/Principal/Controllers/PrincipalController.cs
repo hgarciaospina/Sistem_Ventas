@@ -26,7 +26,6 @@ namespace Sistem_Ventas.Areas.Principal.Controllers
         {
             if (_signInManager.IsSignedIn(User))
             {
-                ViewData["Roles"] = _usuarios.userData(HttpContext);
                 return View();
             }
             else
