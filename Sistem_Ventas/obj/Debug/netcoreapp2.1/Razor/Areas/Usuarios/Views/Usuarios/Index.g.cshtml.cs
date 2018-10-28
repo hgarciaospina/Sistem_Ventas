@@ -56,7 +56,7 @@ namespace AspNetCore
             WriteLiteral("\r\n<div class=\"container2\">\r\n    <h4>Usuarios</h4>\r\n    <div class=\"row\">\r\n        <div class=\"input-field col s0\">\r\n            ");
             EndContext();
             BeginContext(218, 105, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d30e89c04cb447dda1afe7273e2eb492", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e8dacbcf47b4e529d1e50ad415731f2", async() => {
                 BeginContext(310, 9, true);
                 WriteLiteral("Registrar");
                 EndContext();
