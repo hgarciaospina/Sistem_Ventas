@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Sistem_Ventas.Library
 {
@@ -40,6 +41,19 @@ namespace Sistem_Ventas.Library
                     });      
                 }
             }
+            return _userRoles;
+        }
+
+        public List<SelectListItem> getRoles(RoleManager<IdentityRole> roleManager)
+        {
+            var roles = roleManager.Roles.ToList();
+            roles.ForEach(item => {
+
+                _userRoles.Add(new SelectListItem {
+                    Value = item.Id,
+                    Text = item.Name
+                });
+            });
             return _userRoles;
         }
       

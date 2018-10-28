@@ -1,3 +1,10 @@
+D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.deps.json
+D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.runtimeconfig.json
+D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.runtimeconfig.dev.json
+D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.dll
+D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.pdb
+D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.Views.dll
+D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.Views.pdb
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.csproj.CoreCompileInputs.cache
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.RazorAssemblyInfo.cache
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.RazorAssemblyInfo.cs
@@ -32,15 +39,7 @@ D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.RazorTargetAssemblyInfo.cache
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.RazorTargetAssemblyInfo.cs
+D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.Views.pdb
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.dll
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.pdb
-D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.csprojAssemblyReference.cache
-D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.deps.json
-D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.runtimeconfig.json
-D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.runtimeconfig.dev.json
-D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.dll
-D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.pdb
-D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.Views.dll
-D:\Sistem_Ventas\Sistem_Ventas\bin\Debug\netcoreapp2.1\Sistem_Ventas.Views.pdb
-D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.Views.pdb
 D:\Sistem_Ventas\Sistem_Ventas\obj\Debug\netcoreapp2.1\Sistem_Ventas.csproj.CopyComplete
